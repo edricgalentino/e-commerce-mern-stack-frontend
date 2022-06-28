@@ -52,15 +52,17 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className=" flex justify-center">
-                    <h1 className=" text-center text-3xl font-bold">SHOPPIE</h1>
+                    <Link to={"/"} className=" text-center text-3xl font-bold">
+                        SHOPPIE
+                    </Link>
                 </div>
                 <div className="flex gap-5 items-center">
-                    <a href="#" className="text-lg cursor-pointer">
+                    <Link to={"/"} className="text-lg cursor-pointer">
                         REGISTER
-                    </a>
-                    <a href="#" className="text-lg cursor-pointer">
+                    </Link>
+                    <Link to={"/"} className="text-lg cursor-pointer">
                         SIGN IN
-                    </a>
+                    </Link>
                     <Link to={"/cart"} className="cart flex">
                         <AiOutlineShoppingCart className=" cursor-pointer mb-2" size={"30px"} />
                         <div className=" w-3 h-3 bg-black flex items-center justify-center p-3 text-xs text-white rounded-full relative right-2 bottom-1">42</div>
