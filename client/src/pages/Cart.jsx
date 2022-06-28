@@ -1,34 +1,37 @@
 import React from "react";
 import { BiPlus, BiMinus } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     return (
         <>
-            <div className="flex items-center px-5 py-10 flex-col w-full h-screen bg-white">
+            <div className="flex items-center px-5 py-10 flex-col w-full">
                 <h1 className="text-center text-4xl ">YOUR BAG</h1>
                 <div className="info flex justify-between w-full items-center pt-4">
                     <div className="continue-shop-button">
-                        <button className=" border-2 border-black p-2 bg-white text-black hover:bg-black hover:text-white uppercase">CONTINUE SHOPPING</button>
+                        <Link to={"/"} className=" border-2 border-black p-2 bg-white text-black hover:bg-black hover:text-white uppercase">
+                            CONTINUE SHOPPING
+                        </Link>
                     </div>
                     <div className="info flex justify-between w-64">
-                        <a className="underline" href="#">
+                        <Link to={"/"} className="underline">
                             Shopping Bag (2)
-                        </a>
-                        <a className="underline" href="#">
+                        </Link>
+                        <Link to={"/"} className="underline">
                             Your Wishlist (0)
-                        </a>
+                        </Link>
                     </div>
                     <div className="checkout-button">
                         <button className=" border-2 border-black p-2 bg-black text-white uppercase">CHECKOUT NOW</button>
                     </div>
                 </div>
                 <div className="flex w-full my-10 gap-3">
-                    <div className="w-3/4 p-3 bg-slate-200">
-                        <div className="flex justify-evenly items-center bg-red-200 p-5">
+                    <div className="w-3/4 p-3">
+                        <div className="product flex justify-evenly border-y items-center p-5">
                             <div className="img basis-1/6">
                                 <img src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png" alt="" />
                             </div>
-                            <div className="flex basis-4/6 flex-col justify-between items-start gap-4 px-10">
+                            <div className="flex basis-4/6 flex-col justify-between items-start gap-4 px-12">
                                 <h1 className=" text-xl">
                                     <strong>Product: </strong>T-SHIRT
                                 </h1>
@@ -40,12 +43,12 @@ const Cart = () => {
                                     <strong>Size: </strong>UK 17
                                 </h1>
                             </div>
-                            <div className="flex basis-1/6 flex-col justify-around bg-white">
+                            <div className="flex basis-1/6 flex-col justify-around gap-5">
                                 <div className="count flex gap-4 justify-center">
                                     <button>
                                         <BiPlus size={"32px"} />
                                     </button>
-                                    <h1 className=" text-3xl">1</h1>
+                                    <h1 className="text-3xl">1</h1>
                                     <button>
                                         <BiMinus size={"32px"} />
                                     </button>
@@ -56,7 +59,7 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/4  p-5 bg-white border-2  flex flex-col items-start justify-between">
+                    <div className="w-1/4 h-min  p-5 bg-white border-2  flex flex-col items-start justify-between">
                         <h1 className="text-start text-4xl font-thin ">ORDER SUMMARY</h1>
                         <div className="all-price py-5 gap-2 flex flex-col justify-between items-center w-full">
                             <div className="price flex justify-between items-center w-full">
