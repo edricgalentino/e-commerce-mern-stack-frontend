@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaMapMarkerAlt } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -15,53 +16,53 @@ const Footer = () => {
                             maiores. Nobis aliquam dolores illum assumenda. Vitae aspernatur id quis consequuntur ipsa.
                         </p>
                         <div className="flex gap-3">
-                            <a href="https://edricgalentino.github.io" className="icon bg-blue-800 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-blue-900 p-3">
+                            <Link to={"/"} className="icon bg-blue-800 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-blue-900 p-3">
                                 <FaFacebookF size={"22px"} color={"white"} />
-                            </a>
-                            <a href="https://edricgalentino.github.io" className="icon bg-sky-500 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-sky-600 p-3">
+                            </Link>
+                            <Link to={"/"} className="icon bg-sky-500 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-sky-600 p-3">
                                 <FaTwitter size={"22px"} color={"white"} />
-                            </a>
-                            <a href="https://edricgalentino.github.io" className="icon bg-pink-500 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-pink-900 p-3">
+                            </Link>
+                            <Link to={"/"} className="icon bg-pink-500 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-pink-900 p-3">
                                 <FaInstagram size={"22px"} color={"white"} />
-                            </a>
-                            <a href="https://edricgalentino.github.io" className="icon bg-red-700 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-red-900 p-3">
+                            </Link>
+                            <Link to={"/"} className="icon bg-red-700 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-red-900 p-3">
                                 <FaPinterest size={"22px"} color={"white"} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex flex-col text-start">
                         <h1 className=" text-xl mb-10 font-bold">Navigation Links</h1>
                         <div className="links grid grid-flow-row grid-cols-2 gap-2">
-                            <a className="hover:underline" href="#">
+                            <Link to={"/"} className="hover:underline">
                                 Home
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Cart
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Man Fashion
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Woman Fashion
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Accessories
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Suit
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 My Account
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Order Tracking
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Wishlist
-                            </a>
-                            <a className="hover:underline" href="#">
+                            </Link>
+                            <Link to={"/"} className="hover:underline">
                                 Terms
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex flex-col text-start">
@@ -69,21 +70,21 @@ const Footer = () => {
                         <div className="contact flex flex-col gap-6">
                             <div className=" flex gap-3 items-center ">
                                 <FaMapMarkerAlt size={"22px"} />
-                                <a className="hover:underline" href="#">
+                                <Link to={"/"} className="hover:underline">
                                     622 Dixie Path, South Tabinchester 98336
-                                </a>
+                                </Link>
                             </div>
                             <div className=" flex gap-3 items-center ">
                                 <BsTelephoneFill size={"22px"} />
-                                <a className="hover:underline" href="#">
+                                <Link to={"/"} className="hover:underline">
                                     +1 234 56 789
-                                </a>
+                                </Link>
                             </div>
                             <div className=" flex gap-3 items-center ">
                                 <GrMail size={"22px"} />
-                                <a className="hover:underline" href="#">
+                                <Link to={"/"} className="hover:underline">
                                     contact@shoppie.com
-                                </a>
+                                </Link>
                             </div>
                             <div className=" flex w-max cursor-pointer">
                                 <img src="https://i.ibb.co/Qfvn4z6/payment.png" alt="" />
