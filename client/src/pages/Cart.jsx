@@ -14,7 +14,7 @@ const Cart = () => {
                             CONTINUE SHOPPING
                         </Link>
                     </div>
-                    <div className="info flex justify-between w-64">
+                    <div className="info md:flex hidden justify-between w-64">
                         <Link to={"/"} className="underline">
                             Shopping Bag (2)
                         </Link>
@@ -26,25 +26,75 @@ const Cart = () => {
                         <button className=" border-2 border-black p-2 bg-black text-white uppercase">CHECKOUT NOW</button>
                     </div>
                 </div>
-                <div className="flex w-full my-10 gap-3">
-                    <div className="w-3/4 p-3">
-                        <div className="product flex justify-evenly border-y items-center p-5">
-                            <div className="img basis-1/6">
-                                <img src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png" alt="" />
+                <div className="flex w-full my-10 lg:flex-row flex-col gap-3">
+                    <div className="lg:w-3/4 w-full p-3 mx-auto">
+                        <div className="product flex md:flex-row flex-col md:justify-evenly border-y-2 md:gap-0 gap-5 md:items-center items-start p-5">
+                            <div className="img basis-1/6 mx-auto md:mx-0">
+                                <img src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png" width={"200px"} alt="" />
                             </div>
-                            <div className="flex basis-4/6 flex-col justify-between items-start gap-4 px-12">
+                            <div className="flex basis-4/6 flex-col justify-between items-start gap-4 md:px-12">
                                 <h1 className=" text-xl">
                                     <strong>Product: </strong>T-SHIRT
                                 </h1>
                                 <h1 className=" text-xl">
                                     <strong>ID: </strong>3747941403
                                 </h1>
-                                <div className=" w-5 h-5 rounded-full bg-yellow-100"></div>
+                                <div className="color justify-center items-center flex gap-3">
+                                    <h1 className=" text-xl font-bold">Color:</h1>
+                                    <div className={`w-5 h-5 rounded-full bg-black hover:ring-4 hover:ring-slate-400`}></div>
+                                    <div className={`w-5 h-5 rounded-full bg-blue-800 hover:ring-4 hover:ring-slate-400`}></div>
+                                    <div className={`w-5 h-5 rounded-full bg-blue-200 hover:ring-4 hover:ring-slate-400`}></div>
+                                </div>
                                 <h1 className=" text-xl">
                                     <strong>Size: </strong>UK 17
                                 </h1>
                             </div>
-                            <div className="flex basis-1/6 flex-col justify-around gap-5">
+                            <div className="flex basis-1/6 w-full md:flex-col flex-row md:justify-around justify-between gap-5">
+                                <div className="count flex gap-4 justify-center">
+                                    <button
+                                        onClick={() => {
+                                            setCount(count - 1);
+                                        }}
+                                        className={`${count === 1 ? "pointer-events-none" : ""}`}
+                                    >
+                                        <BiMinus size={"32px"} color={`${count === 1 ? "darkgray" : ""}`} />
+                                    </button>
+                                    <h1 className="text-3xl">{count}</h1>
+                                    <button
+                                        onClick={() => {
+                                            setCount(count + 1);
+                                        }}
+                                    >
+                                        <BiPlus size={"32px"} />
+                                    </button>
+                                </div>
+                                <div className="price-per-stuff flex justify-center">
+                                    <h1 className=" text-3xl">$10.00</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="product flex md:flex-row flex-col md:justify-evenly border-y-2 md:gap-0 gap-5 md:items-center items-start p-5">
+                            <div className="img basis-1/6 mx-auto md:mx-0">
+                                <img src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png" width={"200px"} alt="" />
+                            </div>
+                            <div className="flex basis-4/6 flex-col justify-between items-start gap-4 md:px-12">
+                                <h1 className=" text-xl">
+                                    <strong>Product: </strong>T-SHIRT
+                                </h1>
+                                <h1 className=" text-xl">
+                                    <strong>ID: </strong>3747941403
+                                </h1>
+                                <div className="color justify-center items-center flex gap-3">
+                                    <h1 className=" text-xl font-bold">Color:</h1>
+                                    <div className={`w-5 h-5 rounded-full bg-black hover:ring-4 hover:ring-slate-400`}></div>
+                                    <div className={`w-5 h-5 rounded-full bg-blue-800 hover:ring-4 hover:ring-slate-400`}></div>
+                                    <div className={`w-5 h-5 rounded-full bg-blue-200 hover:ring-4 hover:ring-slate-400`}></div>
+                                </div>
+                                <h1 className=" text-xl">
+                                    <strong>Size: </strong>UK 17
+                                </h1>
+                            </div>
+                            <div className="flex basis-1/6 w-full md:flex-col flex-row md:justify-around justify-between gap-5">
                                 <div className="count flex gap-4 justify-center">
                                     <button
                                         onClick={() => {
@@ -69,7 +119,7 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/4 h-min  p-5 bg-white border-2  flex flex-col items-start justify-between">
+                    <div className=" lg:w-1/4 md:w-1/2 md:mx-auto w-full h-min p-5 bg-white border-2  flex flex-col items-start justify-between">
                         <h1 className="text-start text-4xl font-thin ">ORDER SUMMARY</h1>
                         <div className="all-price py-5 gap-2 flex flex-col justify-between items-center w-full">
                             <div className="price flex justify-between items-center w-full">
