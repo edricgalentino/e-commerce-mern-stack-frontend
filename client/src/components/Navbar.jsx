@@ -46,7 +46,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="input flex items-center border-2 border-black gap-2 p-2">
+                    <div className="input md:flex hidden items-center border-2 border-black gap-2 p-2">
                         <input type="text" placeholder="Search" className="bg-transparent outline-none" />
                         <AiOutlineSearch className=" cursor-pointer" />
                     </div>
@@ -57,10 +57,10 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="flex gap-5 items-center">
-                    <Link to={"/"} className="text-lg cursor-pointer">
+                    <Link to={"/register"} className="text-lg md:block hidden cursor-pointer">
                         REGISTER
                     </Link>
-                    <Link to={"/"} className="text-lg cursor-pointer">
+                    <Link to={"/login"} className="text-lg cursor-pointer">
                         SIGN IN
                     </Link>
                     <Link to={"/cart"} className="cart flex">
