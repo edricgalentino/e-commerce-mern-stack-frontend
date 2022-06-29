@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { categories } from "../../data";
 
 const Categories = () => {
@@ -10,7 +11,9 @@ const Categories = () => {
                         <div key={index} className="flex w-full h-[35rem] justify-center items-center bg-cover" style={{ backgroundImage: `url(${category.img})`, backgroundPosition: "center" }}>
                             <div className="flex flex-col items-center">
                                 <h1 className="text-[40px] text-white whitespace-nowrap font-bold">{category.title}</h1>
-                                <button className=" w-40 mt-4 p-2 font-semibold bg-white hover:bg-slate-300 text-black">SHOP NOW</button>
+                                <Link to={"/list-product"} className=" w-40 mt-4 p-2 font-semibold bg-white hover:bg-slate-300 text-black">
+                                    SHOP NOW
+                                </Link>
                             </div>
                         </div>
                     );
@@ -25,7 +28,9 @@ const Categories = () => {
                         <div key={index} className="flex w-full h-[30rem] justify-center items-center bg-cover" style={{ backgroundImage: `url(${category.img})`, backgroundPosition: "center" }}>
                             <div className="flex flex-col items-center">
                                 <h1 className="text-[40px] text-white whitespace-nowrap font-bold">{category.title}</h1>
-                                <button className=" w-40 mt-4 p-2 font-semibold bg-white hover:bg-slate-300 text-black">SHOP NOW</button>
+                                <Link to={"/list-product"} className=" w-40 mt-4 p-2 font-semibold bg-white hover:bg-slate-300 text-black">
+                                    SHOP NOW
+                                </Link>
                             </div>
                         </div>
                     );
