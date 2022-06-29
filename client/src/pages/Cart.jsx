@@ -3,6 +3,7 @@ import { BiPlus, BiMinus } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+    const [count, setCount] = React.useState(1);
     return (
         <>
             <div className="flex items-center px-5 py-10 flex-col w-full">
@@ -45,12 +46,21 @@ const Cart = () => {
                             </div>
                             <div className="flex basis-1/6 flex-col justify-around gap-5">
                                 <div className="count flex gap-4 justify-center">
-                                    <button>
-                                        <BiPlus size={"32px"} />
+                                    <button
+                                        onClick={() => {
+                                            setCount(count - 1);
+                                        }}
+                                        className={`${count === 1 ? "pointer-events-none" : ""}`}
+                                    >
+                                        <BiMinus size={"32px"} color={`${count === 1 ? "darkgray" : ""}`} />
                                     </button>
-                                    <h1 className="text-3xl">1</h1>
-                                    <button>
-                                        <BiMinus size={"32px"} />
+                                    <h1 className="text-3xl">{count}</h1>
+                                    <button
+                                        onClick={() => {
+                                            setCount(count + 1);
+                                        }}
+                                    >
+                                        <BiPlus size={"32px"} />
                                     </button>
                                 </div>
                                 <div className="price-per-stuff flex justify-center">
