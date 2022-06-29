@@ -12,7 +12,7 @@ const Product = ({ product, key }) => {
     return (
         <>
             <div className={`w-full z-10 bg-blue-50`}>
-                <div onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className="flex justify-center items-center w-full -z-10 hover:md:bg-slate-700 hover:md:bg-opacity-40 h-96">
+                <Link to={"/detail-product"} onMouseEnter={() => setInfo(true)} onMouseLeave={() => setInfo(false)} className="flex justify-center items-center w-full -z-10 hover:md:bg-slate-700 hover:md:bg-opacity-40 h-96">
                     <img src={product.img} alt="" className="-z-10 md:w-[300px] w-5/6" />
                     <div className={`${info ? "absolute" : "md:hidden absolute"} flex md:mt-0 mt-72 justify-center items-center md:gap-4 gap-2`}>
                         <button
@@ -43,7 +43,7 @@ const Product = ({ product, key }) => {
                             {isWishlisted ? <AiFillHeart size={"24px"} color={"red"} /> : <AiOutlineHeart size={"24px"} color={"red"} />}
                         </button>
                     </div>
-                </div>
+                </Link>
             </div>
         </>
     );
