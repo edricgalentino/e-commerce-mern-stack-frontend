@@ -8,14 +8,14 @@ const Footer = () => {
     return (
         <>
             <footer>
-                <div className=" items-start w-full grid grid-cols-3 justify-around gap-10 m-5 mt-8">
-                    <div className="flex flex-col gap-7">
+                <div className=" items-start w-full grid md:grid-cols-3 grid-cols-1 justify-around gap-10 p-5 mt-8">
+                    <div className="flex flex-col gap-7 items-center md:items-start">
                         <h1 className="text-start text-black font-bold text-4xl">SHOPPIE</h1>
                         <p className=" text-start text-md">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum nulla ullam mollitia doloribus accusamus quas, sunt veniam labore qui illum soluta consequatur nemo repudiandae non asperiores, doloremque
                             maiores. Nobis aliquam dolores illum assumenda. Vitae aspernatur id quis consequuntur ipsa.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex gap-5">
                             <Link to={"/"} className="icon bg-blue-800 rounded-full hover:ring-8 hover:ring-slate-200 hover:bg-blue-900 p-3">
                                 <FaFacebookF size={"22px"} color={"white"} />
                             </Link>
